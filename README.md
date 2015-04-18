@@ -1,8 +1,8 @@
-# material color combinations Page
+# Material Color Chooser
 
-Product page [material color combinations](http://720dreams.com)
+Simple and easy material color chooser [Material Color Chooser](http://material.720dreams.com)
 
-based on:
+Based on:
 
 * http://www.google.com/design/spec/style/color.html
 * http://ionicons.com/

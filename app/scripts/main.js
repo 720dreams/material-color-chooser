@@ -115,8 +115,8 @@ app.run(['$http', '$templateCache', '$rootScope', '$mdColorPalette', 'localStora
             color = $mdColorPalette[c]['500'];
             colors.push({
                 color: rgbToText(color.value),
-                contrast: rgbToText(color.contrast),
-                //contrast: $mdColorPalette[c].contrastDefaultColor === 'light' ? '#ffffff' : '#000000',
+                //contrast: rgbToText(color.contrast),
+                contrast: '#ffffff',
                 usePrimary: false,
                 useAccent: false,
                 name: c
