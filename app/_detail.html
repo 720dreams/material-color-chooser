@@ -24,11 +24,11 @@
             <md-card-content class="no-padding">
                 <md-content class="padding">
                     <md-toolbar class="md-custom-toolbar md-whiteframe-z1"
-                                style="background-color: {{primary.value}}; color:{{primary.contrast}}">
+                                style="background-color: {{primary.value}}; color:{{forceWhiteContrast ? '#ffffff': primary.contrast}}">
                         <div class="md-toolbar-tools">
                             <md-button class="md-icon-button" aria-label="Menu">
                                 <md-icon md-svg-icon="hamburger"
-                                         style="color:{{primary.contrast}}"></md-icon>
+                                         style="color:{{forceWhiteContrast ? '#ffffff': primary.contrast}}"></md-icon>
                             </md-button>
                             <h2>
                                 <span>Inbox</span>
@@ -36,9 +36,9 @@
                             <span flex></span>
 
                             <md-button class="md-fab md-mini" aria-label="Comment"
-                                       style="background-color: {{accent.value}}; color:{{accent.contrast}}">
+                                       style="background-color: {{accent.value}}; color:{{forceWhiteContrast ? '#ffffff': accent.contrast}}">
                                 <md-icon md-svg-icon="textsms"
-                                         style="color:{{accent.contrast}}"></md-icon>
+                                         style="color:{{forceWhiteContrast ? '#ffffff': accent.contrast}}"></md-icon>
                             </md-button>
                         </div>
                     </md-toolbar>
@@ -69,11 +69,11 @@
                     </md-list>
 
                     <md-button class="md-raised md-custom-btn"
-                               style="background-color: {{primary.value}}; color:{{primary.contrast}}">
+                               style="background-color: {{primary.value}}; color:{{forceWhiteContrast ? '#ffffff': primary.contrast}}">
                         Send
                     </md-button>
                     <md-button class="md-raised md-custom-btn pull-right"
-                               style="background-color: {{accent.value}}; color:{{accent.contrast}}">
+                               style="background-color: {{accent.value}}; color:{{forceWhiteContrast ? '#ffffff': accent.contrast}}">
                         Share
                     </md-button>
                 </md-content>
@@ -86,11 +86,11 @@
             <md-card-content class="no-padding">
                 <md-content class="padding">
                     <md-toolbar class="md-custom-toolbar md-whiteframe-z1"
-                                style="background-color: {{primary.value}}; color:{{primary.contrast}}">
+                                style="background-color: {{primary.value}}; color:{{forceWhiteContrast ? '#ffffff': primary.contrast}}">
                         <div class="md-toolbar-tools">
                             <md-button class="md-icon-button" aria-label="Menu">
                                 <md-icon md-svg-icon="back"
-                                         style="color:{{primary.contrast}}"></md-icon>
+                                         style="color:{{forceWhiteContrast ? '#ffffff': primary.contrast}}"></md-icon>
                             </md-button>
                             <h2>
                                 <span>Text</span>
@@ -99,7 +99,7 @@
 
                             <md-button class="md-icon-button" aria-label="Menu">
                                 <md-icon md-svg-icon="more"
-                                         style="color:{{primary.contrast}}"></md-icon>
+                                         style="color:{{forceWhiteContrast ? '#ffffff': primary.contrast}}"></md-icon>
                             </md-button>
                         </div>
                     </md-toolbar>
@@ -134,7 +134,7 @@
                     <div ng-repeat="(p, v) in primaryPalette" class="small"
                          style="background-color: {{v.value|rgb2hex}}; color: {{v.contrast|rgb2hex}};">
                         <md-radio-button value="{{p}}" class="no-margin">
-                            {{p}}: {{v.value|rgb2hex}} {{v.contrast|rgb2hex}}
+                            {{p}}: {{v.value|rgb2hex}}
                         </md-radio-button>
                     </div>
                 </md-radio-group>
@@ -148,11 +148,15 @@
                     <div ng-repeat="(p, v) in accentPalette" class="small"
                          style="background-color: {{v.value|rgb2hex}}; color: {{v.contrast|rgb2hex}};">
                         <md-radio-button value="{{p}}" class="no-margin">
-                            {{p}}: {{v.value|rgb2hex}} {{v.contrast|rgb2hex}}
+                            {{p}}: {{v.value|rgb2hex}}
                         </md-radio-button>
                     </div>
                 </md-radio-group>
             </md-card-content>
         </md-card>
     </div>
+
+    <md-checkbox ng-model="forceWhiteContrast" aria-label="">
+        White Contrast
+    </md-checkbox>
 </div>

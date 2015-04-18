@@ -6,11 +6,11 @@
             <md-card-content class="no-padding">
                 <md-content class="padding">
                     <md-toolbar class="md-custom-toolbar md-whiteframe-z1"
-                                style="background-color: {{combination.primary.color}}; color:{{combination.primary.contrast}}">
+                                style="background-color: {{combination.primary.color}}; color:{{forceWhiteContrast ? '#ffffff': combination.primary.contrast}}">
                         <div class="md-toolbar-tools">
                             <md-button class="md-icon-button" aria-label="Menu">
                                 <md-icon md-svg-icon="hamburger"
-                                         style="color:{{combination.primary.contrast}}"></md-icon>
+                                         style="color:{{forceWhiteContrast ? '#ffffff': combination.primary.contrast}}"></md-icon>
                             </md-button>
                             <h2>
                                 <span>Inbox</span>
@@ -18,9 +18,9 @@
                             <span flex></span>
 
                             <md-button class="md-fab md-mini" aria-label="Comment"
-                                       style="background-color: {{combination.accent.color}}; color:{{combination.accent.contrast}}">
+                                       style="background-color: {{combination.accent.color}}; color:{{forceWhiteContrast ? '#ffffff': combination.accent.contrast}}">
                                 <md-icon md-svg-icon="textsms"
-                                         style="color:{{combination.accent.contrast}}"></md-icon>
+                                         style="color:{{forceWhiteContrast ? '#ffffff': combination.accent.contrast}}"></md-icon>
                             </md-button>
                         </div>
                     </md-toolbar>
@@ -51,11 +51,11 @@
                     </md-list>
 
                     <md-button class="md-raised md-custom-btn"
-                               style="background-color: {{combination.primary.color}}; color:{{combination.primary.contrast}}">
+                               style="background-color: {{combination.primary.color}}; color:{{forceWhiteContrast ? '#ffffff': combination.primary.contrast}}">
                         Send
                     </md-button>
                     <md-button class="md-raised md-custom-btn pull-right"
-                               style="background-color: {{combination.accent.color}}; color:{{combination.accent.contrast}}">
+                               style="background-color: {{combination.accent.color}}; color:{{forceWhiteContrast ? '#ffffff': combination.accent.contrast}}">
                         Share
                     </md-button>
                 </md-content>
@@ -71,7 +71,7 @@
                                ng-click="hate($event, combination)">
                         <md-icon md-svg-icon="thumbsdown"></md-icon>
                     </md-button>
-                    <md-button class="md-primary">
+                    <md-button class="md-primary" ng-click="goToDetail(combination.primary.name, combination.accent.name)">
                         {{combination.key}}
                     </md-button>
 

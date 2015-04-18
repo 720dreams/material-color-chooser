@@ -92,7 +92,6 @@ app.config(['$urlRouterProvider', '$stateProvider', '$mdThemingProvider', '$mdIc
                                 value: rgb2hex($scope.primaryPalette[$scope.primaryMain].value),
                                 contrast: rgb2hex($scope.primaryPalette[$scope.primaryMain].contrast)
                             };
-
                         }
                     );
 
@@ -115,7 +114,6 @@ app.config(['$urlRouterProvider', '$stateProvider', '$mdThemingProvider', '$mdIc
                     $scope.back = function () {
                         $state.go('combine');
                     };
-
 
                 }]
 
@@ -160,7 +158,6 @@ app.run(['$http', '$templateCache', '$rootScope', '$mdColorPalette', 'localStora
                 '/images/icons/thumbsdown.svg',
                 '/images/icons/android-arrow-back.svg',
                 '/images/icons/android-open.svg'
-
             ],
             colors = [],
             loved = [],
@@ -198,8 +195,8 @@ app.run(['$http', '$templateCache', '$rootScope', '$mdColorPalette', 'localStora
                 color = $mdColorPalette[c]['500'];
                 colors.push({
                     color: rgbToText(color.value),
-                    //contrast: rgbToText(color.contrast),
-                    contrast: '#ffffff',
+                    contrast: rgbToText(color.contrast),
+                    //contrast: '#ffffff',
                     usePrimary: false,
                     useAccent: false,
                     name: c
@@ -264,6 +261,8 @@ app.run(['$http', '$templateCache', '$rootScope', '$mdColorPalette', 'localStora
             updateCount();
             store();
         };
+
+        $rootScope.$forceWhiteContrast = false
 
         $rootScope.shuffle = function () {
             shuffle($rootScope.combinations);

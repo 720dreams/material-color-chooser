@@ -13,7 +13,12 @@
     </div>
     <div flex="20">
         <div>
-            <md-button ng-click="shuffle()">Shuffle</md-button>
+            <md-button class="md-raised" ng-click="shuffle()">Shuffle</md-button>
+        </div>
+        <div>
+            <md-checkbox ng-model="forceWhiteContrast" aria-label="">
+                White Contrast
+            </md-checkbox>
         </div>
     </div>
 </div>
