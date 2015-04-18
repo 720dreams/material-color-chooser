@@ -12,10 +12,9 @@ function shuffle(o) { //v1.0
     return o;
 }
 
-
 function componentToHex(c) {
     var hex = c.toString(16);
-    return hex.length == 1 ? "0" + hex : hex;
+    return hex.length === 1 ? '0' + hex : hex;
 }
 
 function rgbToText(rgb) {
@@ -30,7 +29,7 @@ function rgb2hex(rgb) {
     var r = rgb[0],
         g = rgb[1],
         b = rgb[2];
-    return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+    return '#' + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
 
 function findByKey(source, key) {
@@ -39,7 +38,6 @@ function findByKey(source, key) {
             return source[i];
         }
     }
-    throw "Couldn't find object with id: " + id;
 }
 
 // Declared route
