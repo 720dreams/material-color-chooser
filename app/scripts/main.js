@@ -102,7 +102,7 @@ app.config(['$urlRouterProvider', '$stateProvider', '$mdThemingProvider', '$mdIc
                         function () {
                             $scope.accent = {
                                 value: rgb2hex($scope.accentPalette[$scope.accentMain].value),
-                                contrast: rgb2hex($scope.primaryPalette[$scope.accentMain].contrast)
+                                contrast: rgb2hex($scope.accentPalette[$scope.accentMain].contrast)
                             };
                         }
                     );
@@ -110,11 +110,7 @@ app.config(['$urlRouterProvider', '$stateProvider', '$mdThemingProvider', '$mdIc
                     $scope.primaryMain = 500;
                     $scope.accentMain = 500;
 
-
-
                     $scope.combination = findByKey($scope.combinations, $stateParams.primary + '-' + $stateParams.accent);
-
-                    console.info($scope.combination);
 
                     $scope.back = function () {
                         $state.go('combine');
