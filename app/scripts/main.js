@@ -6,10 +6,10 @@ var app = angular.module('materialCombinations', ['ui.router', 'ngMaterial', 'Lo
 
 //+ Jonas Raoni Soares Silva
 //@ http://jsfromhell.com/array/shuffle [v1.0]
-function shuffle(o){ //v1.0
-    for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+function shuffle(o) { //v1.0
+    for (var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x) {}
     return o;
-};
+}
 
 // Declared route
 app.config(['$urlRouterProvider', '$stateProvider', '$mdThemingProvider', '$mdIconProvider',
@@ -190,7 +190,7 @@ app.run(['$http', '$templateCache', '$rootScope', '$mdColorPalette', 'localStora
     };
 
     $rootScope.shuffle = function () {
-        shuffle($rootScope.combinations)
+        shuffle($rootScope.combinations);
     };
 
     $rootScope.clearAll = function () {
