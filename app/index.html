@@ -47,23 +47,30 @@
         </div>
     </div>
 </div>
-<div class="full-bg bg-stable">
-    <div class="container-fluid">
-        <div class="row margin-bottom">
-            <div class="col-sm-12">
 
+<div class="full-bg">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
                 <section class="md-primary" ng-controller="SubheaderController">
                     <md-button md-no-ink class="md-primary" ng-click="goTo('combine')">Combine</md-button>
                     <md-button md-no-ink class="md-primary" ng-click="goTo('loved')">Loved ({{lovedCount}})</md-button>
                     <md-button md-no-ink class="md-primary" ng-click="goTo('hated')">Hated ({{hatedCount}})</md-button>
                 </section>
+            </div>
+        </div>
+    </div>
+</div>
 
+<div class="full-bg bg-stable">
+    <div class="container-fluid">
+        <div class="row margin-bottom">
+            <div class="col-sm-12">
                 <div ui-view>
                     <div style="margin: 50px 0;">
                         <md-progress-linear md-mode="indeterminate"></md-progress-linear>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

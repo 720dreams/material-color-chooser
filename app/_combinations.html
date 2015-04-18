@@ -59,25 +59,26 @@
                         Share
                     </md-button>
                 </md-content>
+
                 <md-content md-theme="altTheme">
                     <span></span>
-                    <md-button class="md-icon-button md-accent" aria-label="love" ng-if="!combination.love"
+                    <md-button class="md-icon-button md-accent small" aria-label="love" ng-if="!combination.love"
                                ng-click="love($event, combination)">
                         <md-icon md-svg-icon="thumbsup">
                         </md-icon>
                     </md-button>
-                    <md-button class="md-icon-button" aria-label="hate" ng-if="!combination.hate"
+                    <md-button class="md-icon-button small" aria-label="hate" ng-if="!combination.hate"
                                ng-click="hate($event, combination)">
                         <md-icon md-svg-icon="thumbsdown"></md-icon>
                     </md-button>
                     <md-button class="md-primary">
-                        {{combination.primary.name}} - {{combination.accent.name}}
+                        {{combination.key}}
                     </md-button>
-                    <!--
-                    <md-button class="md-icon-button pull-right" aria-label="More" ng-click="more($event)">
-                        <md-icon md-svg-icon="more"></md-icon>
+
+                    <md-button class="md-icon-button pull-right small" aria-label="More" ng-click="goToDetail(combination.primary.name, combination.accent.name)">
+                        <md-icon md-svg-icon="open"></md-icon>
                     </md-button>
-                    -->
+
                 </md-content>
             </md-card-content>
         </md-card>

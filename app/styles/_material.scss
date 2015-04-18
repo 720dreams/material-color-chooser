@@ -7,10 +7,6 @@
     color: white
 }
 
-md-card-content.no-padding {
-    padding: 0px;
-}
-
 .filter {
     td {
         padding-left: 10px;
@@ -24,4 +20,8 @@ md-card-content.no-padding {
 .color-name {
     padding: 5px 0 0 10px;
     text-transform: uppercase;
+}
+
+.md-button.md-icon-button.small {
+     width: auto;
 }

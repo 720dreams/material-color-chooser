@@ -1,0 +1,158 @@
+<div layout="row" layout-wrap>
+    <div flex="50">
+        <h2>{{primaryName}} - {{accentName}}</h2>
+
+        <p>{{primary.value}} - {{accent.value}}</p>
+    </div>
+    <div flex="50">
+        <div class="pull-right">
+            <md-button class="md-icon-button md-accent small" aria-label="love" ng-if="!combination.love"
+                       ng-click="love($event, combination)">
+                <md-icon md-svg-icon="thumbsup">
+                </md-icon>
+            </md-button>
+            <md-button class="md-icon-button small" aria-label="hate" ng-if="!combination.hate"
+                       ng-click="hate($event, combination)">
+                <md-icon md-svg-icon="thumbsdown"></md-icon>
+            </md-button>
+        </div>
+    </div>
+</div>
+<div layout="row" layout-wrap class="cards-row">
+    <div flex-md="50" flex-gt-md="25">
+        <md-card>
+            <md-card-content class="no-padding">
+                <md-content class="padding">
+                    <md-toolbar class="md-custom-toolbar md-whiteframe-z1"
+                                style="background-color: {{primary.value}}; color:{{primary.contrast}}">
+                        <div class="md-toolbar-tools">
+                            <md-button class="md-icon-button" aria-label="Menu">
+                                <md-icon md-svg-icon="hamburger"
+                                         style="color:{{primary.contrast}}"></md-icon>
+                            </md-button>
+                            <h2>
+                                <span>Inbox</span>
+                            </h2>
+                            <span flex></span>
+
+                            <md-button class="md-fab md-mini" aria-label="Comment"
+                                       style="background-color: {{accent.value}}; color:{{accent.contrast}}">
+                                <md-icon md-svg-icon="textsms"
+                                         style="color:{{accent.contrast}}"></md-icon>
+                            </md-button>
+                        </div>
+                    </md-toolbar>
+
+                    <md-list>
+                        <md-list-item class="md-3-line">
+                            <img ng-src="/images/avatar.jpg" class="md-avatar" alt=""/>
+
+                            <div class="md-list-item-text">
+                                <h3>Min Li Chan</h3>
+                                <h4>Brunch this weekend?</h4>
+
+                                <p>I'll be in your neighborhood doing errands}</p>
+                            </div>
+                        </md-list-item>
+                        <md-divider></md-divider>
+                        <md-list-item class="md-3-line">
+                            <img ng-src="/images/avatar.jpg" class="md-avatar" alt=""/>
+
+                            <div class="md-list-item-text">
+                                <h3>Min Li Chan</h3>
+                                <h4>Brunch this weekend?</h4>
+
+                                <p>I'll be in your neighborhood</p>
+                            </div>
+                        </md-list-item>
+                        <md-divider></md-divider>
+                    </md-list>
+
+                    <md-button class="md-raised md-custom-btn"
+                               style="background-color: {{primary.value}}; color:{{primary.contrast}}">
+                        Send
+                    </md-button>
+                    <md-button class="md-raised md-custom-btn pull-right"
+                               style="background-color: {{accent.value}}; color:{{accent.contrast}}">
+                        Share
+                    </md-button>
+                </md-content>
+            </md-card-content>
+        </md-card>
+    </div>
+
+    <div flex-md="50" flex-gt-md="25">
+        <md-card>
+            <md-card-content class="no-padding">
+                <md-content class="padding">
+                    <md-toolbar class="md-custom-toolbar md-whiteframe-z1"
+                                style="background-color: {{primary.value}}; color:{{primary.contrast}}">
+                        <div class="md-toolbar-tools">
+                            <md-button class="md-icon-button" aria-label="Menu">
+                                <md-icon md-svg-icon="back"
+                                         style="color:{{primary.contrast}}"></md-icon>
+                            </md-button>
+                            <h2>
+                                <span>Text</span>
+                            </h2>
+                            <span flex></span>
+
+                            <md-button class="md-icon-button" aria-label="Menu">
+                                <md-icon md-svg-icon="more"
+                                         style="color:{{primary.contrast}}"></md-icon>
+                            </md-button>
+                        </div>
+                    </md-toolbar>
+
+                    <md-card>
+                        <md-card-content>
+                            <h2 class="md-title">Paracosm</h2>
+
+                            <p>
+                                The titles of Washed Out's breakthrough song and the first single from Paracosm share
+                                the
+                                two most important words in Ernest Greene's musical language: feel it. It's a simple
+                                request, as well...
+                            </p>
+
+                            <section layout="row" layout-sm="column" layout-align="center center">
+                                <md-button md-no-ink style="color:{{primary.value}}">Primary (md-noink)</md-button>
+                            </section>
+
+                        </md-card-content>
+                    </md-card>
+
+                </md-content>
+            </md-card-content>
+        </md-card>
+    </div>
+
+    <div flex-md="50" flex-gt-md="25">
+        <md-card flex="50">
+            <md-card-content>
+                <md-radio-group ng-model="primaryMain">
+                    <div ng-repeat="(p, v) in primaryPalette" class="small"
+                         style="background-color: {{v.value|rgb2hex}}; color: {{v.contrast|rgb2hex}};">
+                        <md-radio-button value="{{p}}" class="no-margin">
+                            {{p}}: {{v.value|rgb2hex}} {{v.contrast|rgb2hex}}
+                        </md-radio-button>
+                    </div>
+                </md-radio-group>
+            </md-card-content>
+        </md-card>
+    </div>
+    <div flex-md="50" flex-gt-md="25">
+        <md-card flex-md="50">
+            <md-card-content>
+                <md-radio-group ng-model="accentMain">
+                    <div ng-repeat="(p, v) in accentPalette" class="small"
+                         style="background-color: {{v.value|rgb2hex}}; color: {{v.contrast|rgb2hex}};">
+                        <md-radio-button value="{{p}}" class="no-margin">
+                            {{p}}: {{v.value|rgb2hex}} {{v.contrast|rgb2hex}}
+                        </md-radio-button>
+                    </div>
+                </md-radio-group>
+            </md-card-content>
+        </md-card>
+    </div>
+</div>
