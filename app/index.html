@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>material color combinations</title>
+
+    <meta property="og:title" content="720dreams - We build Services">
+    <meta property="og:description" content="Cool early stage services and products">
+    <meta property="og:image" content="http://720dreams.com/images/logo-512.png">
+    <meta name="keywords" content="Web service, Mobile Apps, Services, Cordova, Meteor, Angular, Ionic, MongoDB, MVP">
+    <meta name="description" content="">
+
+    <link href="http://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:900" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png" sizes="16x16 32x32 64x64">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/apple-touch-icon-precomposed.png">
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css"/>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/libs/bootstrap.custom.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+</head>
+<body ng-app="materialCombinations">
+<!--[if lt IE 10]>
+<div class="alert alert-warning" role="alert">You are using an <strong>outdated</strong> browser. Please <a
+    href="http://browsehappy.com/" target="_blank">upgrade
+    your browser</a> to improve your experience.
+</div>
+<![endif]-->
+
+<div class="full-bg hero">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12"><h1 class="bold text-center">
+                <img src="http://720dreams.com/images/apple-touch-icon-precomposed-af47514c.png" class="upper-logo">
+                Material Color Combinations</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="full-bg bg-stable">
+    <div class="container-fluid">
+        <div class="row margin-bottom">
+            <div class="col-sm-12">
+
+                <section class="md-primary" ng-controller="SubheaderController">
+                    <md-button md-no-ink class="md-primary" ng-click="goTo('combine')">Combine</md-button>
+                    <md-button md-no-ink class="md-primary" ng-click="goTo('loved')">Loved ({{lovedCount}})</md-button>
+                    <md-button md-no-ink class="md-primary" ng-click="goTo('hated')">Hated ({{hatedCount}})</md-button>
+                </section>
+
+                <div ui-view>
+                    <div style="margin: 50px 0;">
+                        <md-progress-linear md-mode="indeterminate"></md-progress-linear>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="full-bg bg-primary-2nd footer">
+    <div class="container-fluid text-center margin-top">
+        <div class="row">
+            <div class="col-sm-12">
+                <img src="http://720dreams.com/images/logo-white-text-d234abc2.png" alt="logo" class="lower-logo">
+
+                <div class="footer-links text-center margin-top light">
+                    <a href="mailto:contact@720dreams.com">Contact us</a> &bull;
+                    <a role="encoded"
+                       href="http://720dreams.com/views.html?name=material color combinations&title=Feedback&urlWeb=http://generator.720dreams.com/&logo=http://720dreams.com/images/logo-white-text-d234abc2.png&accentColor=1A237E">Feedback</a> &bull;
+                    <a role="encoded"
+                       href="http://720dreams.com/views.html?name=material color combinations&title=About&urlWeb=http://generator.720dreams.com/&logo=http://720dreams.com/images/logo-white-text-d234abc2.png&accentColor=1A237E">About</a> &bull;
+                    <a role="encoded"
+                       href="http://720dreams.com/views.html?name=material color combinations&title=Privacy Policy&urlWeb=http://generator.720dreams.com/&logo=http://720dreams.com/images/logo-white-text-d234abc2.png&accentColor=1A237E">Privacy
+                        Policy</a> &bull;
+                    <a role="encoded"
+                       href="http://720dreams.com/views.html?name=material color combinations&title=Terms of Service&urlWeb=http://generator.720dreams.com/&logo=http://720dreams.com/images/logo-white-text-d234abc2.png&accentColor=1A237E">Terms
+                        of Service</a> &bull;
+                    <a href="http://720dreams.com" target="_blank">© 2015, 720dreams LLC</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function (b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+            function () {
+                (b[l].q = b[l].q || []).push(arguments)
+            });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = '//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+</script>
+
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<script src="/bower_components/angular/angular.js"></script>
+<script src="/bower_components/angular-animate/angular-animate.js"></script>
+<script src="/bower_components/angular-aria/angular-aria.js"></script>
+<script src="/bower_components/angular-material/angular-material.js"></script>
+<script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="/bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+
+<!-- build:js scripts/main.js -->
+<script src="scripts/main.js"></script>
+<!-- endbuild -->
+</body>
+</html>

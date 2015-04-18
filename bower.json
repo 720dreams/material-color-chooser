@@ -1,0 +1,9 @@
+{
+  "name": "material-color-combinations",
+  "private": true,
+  "dependencies": {
+    "angular-material": "master",
+    "angular-ui-router": "~0.2.13",
+    "angular-local-storage": "~0.1.5"
+  }
+}

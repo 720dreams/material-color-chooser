@@ -1,0 +1,167 @@
+@import "variables";
+@import "btn";
+@import "material";
+
+// bower:scss
+// endbower
+
+///////////////////////////////////////////
+//
+// Typography
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6, body {
+    font-weight: 300;
+}
+
+.bold {
+    font-weight: 900;
+}
+
+.nav {
+    margin-left: 15px;
+}
+
+a {
+    color: $primary;
+
+    &.underline {
+        text-decoration: underline;
+    }
+}
+
+.small {
+    font-size: 0.75em;
+}
+
+.container-fluid {
+    max-width: 1200px;
+}
+
+///////////////////////////////////////////
+//
+// Layout
+
+.max-100 {
+    max-width: 100%;
+}
+
+.margin-bottom {
+    margin-bottom: 60px;
+}
+
+.margin-top {
+    margin-top: 60px;
+}
+
+.group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.alert.alert-warning {
+    padding: 10px;
+    margin: 10px;
+    border: solid #EF6C00;
+    color: #FF9800;
+}
+
+///////////////////////////////////////////
+//
+// Logo
+
+.upper-logo {
+    max-width: 60px;
+}
+
+.upper-logo-small {
+    max-width: 60px;
+}
+
+.lower-logo {
+    max-width: 200px;
+}
+
+///////////////////////////////////////////
+//
+// Background styles
+
+.padding {
+    padding: 10px;
+}
+
+.bg-primary {
+    background-color: $primary;
+}
+
+.bg-primary-2nd {
+    background-color: $primary-2nd;
+    color: $splash-color;
+}
+
+.bg-stable {
+    background-color: $stable-color;
+}
+
+.full-bg {
+    padding: 20px 0;
+
+    a {
+        color: $splash-color;
+    }
+
+    .light {
+        color: rgba(255, 255, 255, 0.7);
+
+        a {
+            color: rgba(255, 255, 255, 0.7);
+        }
+    }
+}
+
+.hero {
+    width: 100%;
+    background-color: $primary;
+
+    &.hero-img {
+        background: url('http://720dreams.com/images/720dreams-generator-scene.jpg') no-repeat center center fixed;
+        background-size: cover;
+        background-attachment: scroll;
+    }
+
+    color: $splash-color;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+
+    h1 {
+        //font-size: 3.2em;
+        margin: 10px 0;
+    }
+}
+
+///////////////////////////////////////////
+//
+// Media Queries
+
+@media (max-width: 768px) {
+
+    .upper-logo {
+        max-width: 75px;
+    }
+
+    .margin-top {
+        margin-top: 10px;
+    }
+
+    .margin-bottom {
+        margin-bottom: 10px;
+    }
+
+    body {
+        font-size: 16px;
+    }
+}

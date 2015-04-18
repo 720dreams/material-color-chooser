@@ -1,0 +1,30 @@
+<md-content>
+
+    <div layout="row" layout-wrap class="color-filter">
+        <div ng-repeat="color in colors" flex="20"
+             style="background-color: {{color.color}}; color:{{color.contrast}};">
+            <div class="color-name">
+                {{color.name}}
+            </div>
+            <div>
+                <md-checkbox ng-model="color.usePrimary" aria-label="{{color.name}}">Primary</md-checkbox>
+            </div>
+            <div>
+                <md-checkbox ng-model="color.useAccent" aria-label="{{color.name}}">Accent</md-checkbox>
+            </div>
+        </div>
+        <!--
+        <div flex="20">
+            <div>
+                <md-checkbox ng-click="allPrimary()">All Primary</md-checkbox>
+            </div>
+            <div>
+                <md-checkbox ng-click="allAccent()">All Accent</md-checkbox>
+            </div>
+        </div>
+        -->
+    </div>
+
+    <ng-include src="'_combinations.html'"></ng-include>
+
+</md-content>
