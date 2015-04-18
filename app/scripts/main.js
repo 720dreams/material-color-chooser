@@ -262,7 +262,7 @@ app.run(['$http', '$templateCache', '$rootScope', '$mdColorPalette', 'localStora
             store();
         };
 
-        $rootScope.$forceWhiteContrast = false
+        $rootScope.$forceWhiteContrast = false;
 
         $rootScope.shuffle = function () {
             shuffle($rootScope.combinations);
